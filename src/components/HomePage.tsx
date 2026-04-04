@@ -52,7 +52,7 @@ const HomePage = () => {
   const getRankIcon = (index: number) => {
     if (index === 0) return <Crown className="w-5 h-5 text-reward" />;
     if (index === 1) return <Medal className="w-5 h-5 text-muted-foreground" />;
-    if (index === 2) return <Medal className="w-5 h-5 text-amber-700" />;
+    if (index === 2) return <Medal className="w-5 h-5 text-accent-foreground" />;
     return <span className="w-5 text-center text-sm font-medium text-muted-foreground">{index + 1}</span>;
   };
 
