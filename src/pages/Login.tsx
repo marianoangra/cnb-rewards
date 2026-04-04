@@ -72,6 +72,18 @@ const Login = () => {
             Entrar com Apple
           </Button>
         </div>
+
+        {/* Legal links */}
+        <div className="flex flex-col items-center gap-2 text-xs text-muted-foreground">
+          <div className="flex gap-3">
+            <Link to="/terms" className="hover:text-foreground underline">Termos de Uso</Link>
+            <span>•</span>
+            <Link to="/privacy" className="hover:text-foreground underline">Privacidade</Link>
+            <span>•</span>
+            <Link to="/support" className="hover:text-foreground underline">Suporte</Link>
+          </div>
+          <p>© 2026 CNB Cripto. Todos os direitos reservados.</p>
+        </div>
       </div>
     </div>
   );
