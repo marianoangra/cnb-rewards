@@ -265,6 +265,7 @@ const Login = () => {
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <Link to="/terms" className="hover:text-foreground transition-colors">Termos de Serviço</Link>
               <Link to="/privacy" className="hover:text-foreground transition-colors">Política de Privacidade</Link>
+              <Link to="/privacy-en" className="hover:text-foreground transition-colors">Privacy Policy (EN)</Link>
               <Link to="/support" className="hover:text-foreground transition-colors">Suporte</Link>
             </div>
           </div>
