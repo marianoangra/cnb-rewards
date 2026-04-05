@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import PrivacyEN from "./pages/PrivacyEN";
 import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 
