@@ -3,7 +3,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { lovable } from "@/integrations/lovable";
 import { Button } from "@/components/ui/button";
-import { Zap, Trophy, Gamepad2, Globe, TrendingUp, Shield, ChevronRight } from "lucide-react";
+import { Zap, Trophy, Gamepad2, Globe, TrendingUp, Shield, BatteryCharging, Smartphone } from "lucide-react";
 import { toast } from "sonner";
 
 const Login = () => {
@@ -35,9 +35,7 @@ const Login = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold font-heading">
-              <span className="text-primary">CNB</span>Cripto
-            </span>
+            <span className="text-xl font-bold font-heading"><span className="text-primary">CNB</span> Mobile</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#como-funciona" className="hover:text-foreground transition-colors">Como funciona</a>
@@ -49,7 +47,7 @@ const Login = () => {
             className="rounded-full px-6 font-semibold"
             onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Quero participar
+            Começar agora
           </Button>
         </div>
       </nav>
@@ -60,14 +58,14 @@ const Login = () => {
           <div className="flex-1 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-xs font-mono uppercase tracking-widest text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Abra o App e Ganhe Pontos
+              Carregue e Ganhe
             </div>
             <h1 className="text-4xl md:text-6xl font-black font-heading leading-tight">
-              Abra o App.{" "}
-              <span className="text-primary">Ganhe pontos e suba no Ranking.</span>
+              Carregue seu celular.{" "}
+              <span className="text-primary">Ganhe pontos CNB.</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">
-              O CNB Cripto recompensa você simplesmente por abrir o app todos os dias. Acumule pontos, mantenha sua sequência e dispute o topo do ranking.
+              O CNB Mobile transforma o tempo de carregamento do seu celular em pontos CNB. Uma nova economia baseada no seu consumo diário de energia — de qualquer lugar do mundo.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button
@@ -75,7 +73,7 @@ const Login = () => {
                 className="rounded-full px-8 font-bold text-base h-14"
                 onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
               >
-                QUERO PARTICIPAR
+                COMEÇAR AGORA
               </Button>
               <Button
                 variant="outline"
@@ -94,18 +92,18 @@ const Login = () => {
               <div className="w-20 h-1 rounded-full bg-primary/30 mx-auto mb-6" />
               <div className="flex flex-col items-center gap-4">
                 <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-primary-foreground" />
+                  <BatteryCharging className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">CNB Cripto</p>
+                <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">CNB Mobile</p>
                 <p className="text-xs text-muted-foreground">Carregando…</p>
                 <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
                   <div className="w-3/4 h-full rounded-full bg-primary animate-pulse" />
                 </div>
-                <p className="text-2xl font-black font-heading text-primary">+10 Points</p>
-                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Pontos acumulados hoje</p>
+                <p className="text-2xl font-black font-heading text-primary">+10 CNB</p>
+                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Pontos ganhos hoje</p>
                 <div className="w-full rounded-xl border border-border p-3 text-center mt-2">
                   <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Saldo Total</p>
-                  <p className="text-xl font-black font-heading text-primary">347.5 Points</p>
+                  <p className="text-xl font-black font-heading text-primary">347.5 CNB</p>
                 </div>
               </div>
             </div>
@@ -116,8 +114,8 @@ const Login = () => {
         <div className="max-w-6xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: "Gratuito", value: "100%", icon: "💎" },
-            { label: "Recompensas", value: "Diário", icon: "🎯" },
-            { label: "Ranking", value: "Global", icon: "🏆" },
+            { label: "Downloads", value: "50K+", icon: "📲" },
+            { label: "Plataforma", value: "Global", icon: "🌍" },
             { label: "Inovação", value: "BR", icon: "🇧🇷" },
           ].map((s) => (
             <div key={s.label} className="bg-card rounded-xl p-4 border border-border text-center">
@@ -137,17 +135,17 @@ const Login = () => {
         <div className="max-w-6xl mx-auto">
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Como funciona</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            Simples como abrir o app
+            Simples: carregue e ganhe
           </h2>
           <p className="text-muted-foreground mb-12 max-w-lg">
-            Três passos para começar a acumular pontos todos os dias.
+            Três passos para transformar o carregamento do seu celular em pontos CNB.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { step: "01", icon: "📲", title: "Baixe o app", desc: "Instale o CNB Cripto no seu smartphone. Disponível para iOS, sem burocracia." },
-              { step: "02", icon: "👆", title: "Abra todos os dias", desc: "Ao abrir o app, seu check-in diário é registrado automaticamente e você ganha pontos." },
-              { step: "03", icon: "🏆", title: "Acumule e suba no ranking", desc: "Quanto mais dias consecutivos, mais bônus. Dispute o topo do ranking global." },
+              { step: "01", icon: "📲", title: "Baixe o CNB Mobile", desc: "Instale o app no seu smartphone. Disponível para Android e iOS, sem burocracia." },
+              { step: "02", icon: "🔌", title: "Coloque para carregar", desc: "Conecte seu celular ao carregador. O app detecta automaticamente e começa a acumular pontos CNB." },
+              { step: "03", icon: "🏆", title: "Acumule e suba no ranking", desc: "Quanto mais você carrega, mais pontos ganha. Dispute o topo do ranking global entre todos os usuários." },
             ].map((item) => (
               <div key={item.step} className="bg-card rounded-2xl p-6 border border-border group hover:border-primary/50 transition-colors">
                 <p className="text-xs font-mono text-muted-foreground mb-4">{item.step} —</p>
@@ -167,18 +165,18 @@ const Login = () => {
         <div className="max-w-6xl mx-auto">
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Funcionalidades</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            Um game que recompensa você
+            Uma nova economia de energia
           </h2>
           <p className="text-muted-foreground mb-12 max-w-lg">
-            Muito além de um app de pontos — uma experiência gamificada completa.
+            Transforme algo que você já faz todos os dias em recompensas reais.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: <Gamepad2 className="w-6 h-6" />, title: "Gamificação real", desc: "Check-ins diários, sequências (streaks) e ranking que tornam o acúmulo de pontos divertido e viciante." },
+              { icon: <BatteryCharging className="w-6 h-6" />, title: "Mineração por carregamento", desc: "Conecte o carregador e o app converte automaticamente o tempo de carga em pontos CNB. Sem esforço." },
               { icon: <Shield className="w-6 h-6" />, title: "Seguro e confiável", desc: "Autenticação via Google e Apple. Seus dados protegidos com criptografia de ponta." },
-              { icon: <Globe className="w-6 h-6" />, title: "Use de qualquer lugar", desc: "Funciona de qualquer lugar. Basta abrir o app uma vez por dia para ganhar pontos." },
-              { icon: <TrendingUp className="w-6 h-6" />, title: "Ranking global", desc: "Veja sua posição entre todos os usuários. Quem abre mais, sobe mais no ranking." },
+              { icon: <Globe className="w-6 h-6" />, title: "Plataforma global", desc: "Funciona de qualquer lugar do mundo. Basta carregar o celular para acumular pontos CNB." },
+              { icon: <TrendingUp className="w-6 h-6" />, title: "Ranking global", desc: "Acompanhe sua posição entre todos os usuários. Quem carrega mais, sobe mais no ranking." },
             ].map((item) => (
               <div key={item.title} className="bg-card rounded-2xl p-6 border border-border flex gap-4 items-start hover:border-primary/50 transition-colors">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
@@ -201,11 +199,12 @@ const Login = () => {
         <div className="max-w-6xl mx-auto">
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Sobre</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            CNB Cripto
+            CNB Mobile
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            O CNB Cripto é um game mobile que recompensa seus usuários com pontos simplesmente por abrir o app diariamente.
-            Mantenha sua sequência, acumule pontos e dispute o topo do ranking. Simples, divertido e gratuito.
+            O CNB Mobile é uma plataforma inovadora que revoluciona a forma como você carrega seu celular. 
+            Nosso app converte o tempo de carregamento em pontos CNB valiosos, criando uma nova economia baseada 
+            no seu consumo diário de energia. Carregue, acumule e suba no ranking — de qualquer lugar do mundo.
           </p>
         </div>
       </section>
@@ -217,10 +216,10 @@ const Login = () => {
         <div className="max-w-2xl mx-auto">
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Entre agora</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            Pronto para começar a ganhar?
+            Pronto para ganhar enquanto carrega?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Faça login e comece a acumular pontos agora mesmo.
+            Faça login e comece a transformar energia em pontos CNB agora mesmo.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-sm mx-auto">
@@ -259,8 +258,9 @@ const Login = () => {
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div>
               <p className="text-lg font-bold font-heading">
-                <span className="text-primary">CNB</span>Cripto
+                <span className="text-primary">CNB</span> Mobile
               </p>
+              <p className="text-xs text-muted-foreground mt-1">por Cripto no Bolso</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <Link to="/terms" className="hover:text-foreground transition-colors">Termos de Serviço</Link>
@@ -270,7 +270,7 @@ const Login = () => {
             </div>
           </div>
           <p className="text-xs text-muted-foreground mt-6">
-            © 2026 CNB Cripto. Todos os direitos reservados.
+            © 2026 CNB Mobile — Cripto no Bolso. Todos os direitos reservados.
           </p>
         </div>
       </footer>
