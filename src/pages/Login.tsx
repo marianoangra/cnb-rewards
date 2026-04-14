@@ -42,13 +42,15 @@ const Login = () => {
             <a href="#funcionalidades" className="hover:text-foreground transition-colors">Funcionalidades</a>
             <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
           </div>
-          <Button
-            size="sm"
-            className="rounded-full px-6 font-semibold"
-            onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Começar agora
-          </Button>
+            <Button size="sm" className="rounded-full px-6 font-semibold">
+              Google Play
+            </Button>
+          </a>
         </div>
       </nav>
 
@@ -68,13 +70,15 @@ const Login = () => {
               O CNB Mobile transforma o tempo de carregamento do seu celular em pontos CNB. Uma nova economia baseada no seu consumo diário de energia — de qualquer lugar do mundo.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button
-                size="lg"
-                className="rounded-full px-8 font-bold text-base h-14"
-                onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                COMEÇAR AGORA
-              </Button>
+                <Button size="lg" className="rounded-full px-8 font-bold text-base h-14">
+                  BAIXAR NO GOOGLE PLAY
+                </Button>
+              </a>
               <Button
                 variant="outline"
                 size="lg"
