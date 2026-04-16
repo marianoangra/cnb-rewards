@@ -15,7 +15,7 @@ const PrivacyEN = () => {
         <div className="prose prose-sm text-muted-foreground space-y-4">
           <section>
             <h2 className="text-lg font-semibold text-foreground">1. Introduction</h2>
-            <p>CNB Cripto ("we", "our" or "App") is committed to protecting the privacy of our users. This Privacy Policy describes how we collect, use, store and protect your personal information.</p>
+            <p>CNB Mobile ("we", "our" or "App") is committed to protecting the privacy of our users. This Privacy Policy describes how we collect, use, store and protect your personal information.</p>
           </section>
 
           <section>
