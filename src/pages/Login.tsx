@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Zap, Trophy, Gamepad2, Globe, TrendingUp, Shield, BatteryCharging, Smartphone } from "lucide-react";
 import { toast } from "sonner";
 import ceoImage from "@/assets/ceo-rafael.jpg";
+import logoCnb from "@/assets/logo-cnb.png";
 
 const Login = () => {
   const { user, loading } = useAuth();
@@ -36,6 +37,7 @@ const Login = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
+            <img src={logoCnb} alt="CNB Mobile logo" className="w-8 h-8 rounded-lg" />
             <span className="text-xl font-bold font-heading"><span className="text-primary">CNB</span> Mobile</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -81,9 +83,7 @@ const Login = () => {
             <div className="w-64 md:w-72 rounded-[2rem] border-2 border-primary/30 bg-card p-6 shadow-elevated relative">
               <div className="w-20 h-1 rounded-full bg-primary/30 mx-auto mb-6" />
               <div className="flex flex-col items-center gap-4">
-                <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center">
-                  <BatteryCharging className="w-8 h-8 text-primary-foreground" />
-                </div>
+                <img src={logoCnb} alt="CNB Mobile logo" className="w-16 h-16 rounded-2xl" />
                 <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">CNB Mobile</p>
                 <p className="text-xs text-muted-foreground">Carregando…</p>
                 <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
