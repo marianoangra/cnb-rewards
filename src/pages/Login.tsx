@@ -200,6 +200,42 @@ const Login = () => {
 
       <div className="h-px glow-line" />
 
+      {/* Founder */}
+      <section id="founder" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Founder & CEO</p>
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="flex-shrink-0">
+              <img
+                src="https://static.wixstatic.com/media/e1bcaa_aa35adc71bc148f0a68ddd78df65b011~mv2.jpeg/v1/fill/w_395,h_310,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RAFAEL%20MARIANO%20.jpeg"
+                alt="Rafael Mariano"
+                className="w-48 h-48 rounded-2xl object-cover border-2 border-primary/30 shadow-elevated"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-3xl md:text-4xl font-black font-heading mb-2">Rafael Mariano</h2>
+              <p className="text-sm font-mono uppercase tracking-widest text-primary mb-4">CEO & Founder — Cripto no Bolso</p>
+              <p className="text-muted-foreground mb-3">
+                Analista de Investimentos CNPI-T, educador, empresário e desenvolvedor de soluções inovadoras no mercado financeiro e cripto. Com passagens por XP Investimentos, Rico e Terra Investimentos, foi condecorado como um dos professores mais influentes da sua região no SENAI.
+              </p>
+              <p className="text-muted-foreground">
+                Idealizador de robôs de investimentos e CopyTrading, Rafael une tecnologia e finanças para criar produtos que transformam a vida das pessoas — como o CNB Mobile.
+              </p>
+              <a
+                href="https://rafaelmariano.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm font-semibold text-primary hover:underline"
+              >
+                rafaelmariano.com.br →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px glow-line" />
+
       {/* CTA */}
       <section id="cta" className="py-20 px-6 text-center">
         <div className="max-w-2xl mx-auto">
