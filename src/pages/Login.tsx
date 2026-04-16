@@ -81,15 +81,6 @@ const Login = () => {
                   className="h-14 w-auto"
                 />
               </a>
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-full px-8 font-bold text-base h-14"
-                onClick={() => document.getElementById("como-funciona")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                Saiba mais
-              </Button>
-            </div>
           </div>
 
           {/* Phone mockup */}
