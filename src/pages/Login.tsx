@@ -75,9 +75,11 @@ const Login = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" className="rounded-full px-8 font-bold text-base h-14">
-                  BAIXAR NO GOOGLE PLAY
-                </Button>
+                <img
+                  alt="Disponível no Google Play"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
+                  className="h-14 w-auto"
+                />
               </a>
               <Button
                 variant="outline"
@@ -232,9 +234,11 @@ const Login = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="h-14 rounded-full px-8 font-bold text-base">
-                BAIXAR NO GOOGLE PLAY
-              </Button>
+              <img
+                alt="Disponível no Google Play"
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
+                className="h-14 w-auto"
+              />
             </a>
           </div>
         </div>
