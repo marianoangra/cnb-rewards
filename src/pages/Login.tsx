@@ -81,7 +81,7 @@ const Login = () => {
                   className="h-14 w-auto"
                 />
               </a>
-          </div>
+            </div>
 
           {/* Phone mockup */}
           <div className="flex-shrink-0">
