@@ -12,7 +12,7 @@ const Login = () => {
 
   useEffect(() => {
     if (!loading && user) navigate("/", { replace: true });
-  }, [user, loading, navigate]);
+  }, [user, loading]);
 
   const handleSignIn = async (provider: "google" | "apple") => {
     const result = await lovable.auth.signInWithOAuth(provider);
