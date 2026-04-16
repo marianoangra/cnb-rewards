@@ -2,15 +2,17 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { lovable } from "@/integrations/lovable";
-import { Button } from "@/components/ui/button";
-import { Zap, Trophy, Gamepad2, Globe, TrendingUp, Shield, BatteryCharging, Smartphone } from "lucide-react";
+import { Globe, TrendingUp, Shield, BatteryCharging } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ceoImage from "@/assets/ceo-rafael.jpg";
 import logoCnb from "@/assets/logo-cnb.png";
 
 const Login = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!loading && user) navigate("/", { replace: true });
@@ -18,9 +20,7 @@ const Login = () => {
 
   const handleSignIn = async (provider: "google" | "apple") => {
     const result = await lovable.auth.signInWithOAuth(provider);
-    if (result.error) {
-      toast.error("Erro ao fazer login. Tente novamente.");
-    }
+    if (result.error) toast.error(t("landing.loginError"));
   };
 
   if (loading) {
@@ -33,66 +33,56 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src={logoCnb} alt="CNB Mobile logo" className="w-8 h-8 rounded-lg" />
             <span className="text-xl font-bold font-heading"><span className="text-primary">CNB</span> Mobile</span>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#como-funciona" className="hover:text-foreground transition-colors">Como funciona</a>
-            <a href="#funcionalidades" className="hover:text-foreground transition-colors">Funcionalidades</a>
-            <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
+          <div className="flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+              <a href="#como-funciona" className="hover:text-foreground transition-colors">{t("nav.howItWorks")}</a>
+              <a href="#funcionalidades" className="hover:text-foreground transition-colors">{t("nav.features")}</a>
+              <a href="#sobre" className="hover:text-foreground transition-colors">{t("nav.about")}</a>
+            </div>
+            <LanguageSwitcher />
           </div>
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="relative pt-32 pb-20 px-6 gradient-hero">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-xs font-mono uppercase tracking-widest text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Carregue e Ganhe
+              {t("landing.badge")}
             </div>
             <h1 className="text-4xl md:text-6xl font-black font-heading leading-tight">
-              Carregue seu celular.{" "}
-              <span className="text-primary">Ganhe pontos CNB.</span>
+              {t("landing.heroTitle1")}{" "}
+              <span className="text-primary">{t("landing.heroTitle2")}</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-lg">
-              O CNB Mobile transforma o tempo de carregamento do seu celular em pontos CNB. Uma nova economia baseada no seu consumo diário de energia — de qualquer lugar do mundo.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-lg">{t("landing.heroDesc")}</p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  alt="Disponível no Google Play"
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
-                  className="h-14 w-auto"
-                />
+              <a href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2" target="_blank" rel="noopener noreferrer">
+                <img alt={t("landing.googlePlayAlt")} src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" className="h-14 w-auto" />
               </a>
             </div>
           </div>
 
-          {/* Phone mockup */}
           <div className="flex-shrink-0">
             <div className="w-64 md:w-72 rounded-[2rem] border-2 border-primary/30 bg-card p-6 shadow-elevated relative">
               <div className="w-20 h-1 rounded-full bg-primary/30 mx-auto mb-6" />
               <div className="flex flex-col items-center gap-4">
                 <img src={logoCnb} alt="CNB Mobile logo" className="w-16 h-16 rounded-2xl" />
                 <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">CNB Mobile</p>
-                <p className="text-xs text-muted-foreground">Carregando…</p>
+                <p className="text-xs text-muted-foreground">{t("landing.phoneCharging")}</p>
                 <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
                   <div className="w-3/4 h-full rounded-full bg-primary animate-pulse" />
                 </div>
                 <p className="text-2xl font-black font-heading text-primary">+10 CNB</p>
-                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Pontos ganhos hoje</p>
+                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">{t("landing.phonePointsToday")}</p>
                 <div className="w-full rounded-xl border border-border p-3 text-center mt-2">
-                  <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Saldo Total</p>
+                  <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">{t("landing.phoneTotalBalance")}</p>
                   <p className="text-xl font-black font-heading text-primary">347.5 CNB</p>
                 </div>
               </div>
@@ -100,13 +90,12 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Stats bar */}
         <div className="max-w-6xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Gratuito", value: "100%", icon: "💎" },
-            { label: "Downloads", value: "50 mil+", icon: "📲" },
-            { label: "Plataforma", value: "Global", icon: "🌍" },
-            { label: "Inovação", value: "BR", icon: "🇧🇷" },
+            { label: t("landing.statsFree"), value: "100%", icon: "💎" },
+            { label: t("landing.statsDownloads"), value: t("landing.statsDownloadsValue"), icon: "📲" },
+            { label: t("landing.statsPlatform"), value: t("landing.statsPlatformValue"), icon: "🌍" },
+            { label: t("landing.statsInnovation"), value: t("landing.statsInnovationValue"), icon: "🇧🇷" },
           ].map((s) => (
             <div key={s.label} className="bg-card rounded-xl p-4 border border-border text-center">
               <p className="text-2xl mb-1">{s.icon}</p>
@@ -117,25 +106,19 @@ const Login = () => {
         </div>
       </section>
 
-      {/* Divider */}
       <div className="h-px glow-line" />
 
-      {/* Como funciona */}
       <section id="como-funciona" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Como funciona</p>
-          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            Simples: carregue e ganhe
-          </h2>
-          <p className="text-muted-foreground mb-12 max-w-lg">
-            Três passos para transformar o carregamento do seu celular em pontos CNB.
-          </p>
+          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.howSection")}</p>
+          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.howTitle")}</h2>
+          <p className="text-muted-foreground mb-12 max-w-lg">{t("landing.howDesc")}</p>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { step: "01", icon: "📲", title: "Baixe o CNB Mobile", desc: "Instale o app no seu smartphone. Disponível para Android e iOS, sem burocracia." },
-              { step: "02", icon: "🔌", title: "Coloque para carregar", desc: "Conecte seu celular ao carregador. O app detecta automaticamente e começa a acumular pontos CNB." },
-              { step: "03", icon: "🏆", title: "Acumule e suba no ranking", desc: "Quanto mais você carrega, mais pontos ganha. Dispute o topo do ranking global entre todos os usuários." },
+              { step: "01", icon: "📲", title: t("landing.step1Title"), desc: t("landing.step1Desc") },
+              { step: "02", icon: "🔌", title: t("landing.step2Title"), desc: t("landing.step2Desc") },
+              { step: "03", icon: "🏆", title: t("landing.step3Title"), desc: t("landing.step3Desc") },
             ].map((item) => (
               <div key={item.step} className="bg-card rounded-2xl p-6 border border-border group hover:border-primary/50 transition-colors">
                 <p className="text-xs font-mono text-muted-foreground mb-4">{item.step} —</p>
@@ -150,28 +133,21 @@ const Login = () => {
 
       <div className="h-px glow-line" />
 
-      {/* Funcionalidades */}
       <section id="funcionalidades" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Funcionalidades</p>
-          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            Uma nova economia de energia
-          </h2>
-          <p className="text-muted-foreground mb-12 max-w-lg">
-            Transforme algo que você já faz todos os dias em recompensas reais.
-          </p>
+          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.featSection")}</p>
+          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.featTitle")}</h2>
+          <p className="text-muted-foreground mb-12 max-w-lg">{t("landing.featDesc")}</p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: <BatteryCharging className="w-6 h-6" />, title: "Mineração por carregamento", desc: "Conecte o carregador e o app converte automaticamente o tempo de carga em pontos CNB. Sem esforço." },
-              { icon: <Shield className="w-6 h-6" />, title: "Seguro e confiável", desc: "Autenticação via Google e Apple. Seus dados protegidos com criptografia de ponta." },
-              { icon: <Globe className="w-6 h-6" />, title: "Plataforma global", desc: "Funciona de qualquer lugar do mundo. Basta carregar o celular para acumular pontos CNB." },
-              { icon: <TrendingUp className="w-6 h-6" />, title: "Ranking global", desc: "Acompanhe sua posição entre todos os usuários. Quem carrega mais, sobe mais no ranking." },
+              { icon: <BatteryCharging className="w-6 h-6" />, title: t("landing.feat1Title"), desc: t("landing.feat1Desc") },
+              { icon: <Shield className="w-6 h-6" />, title: t("landing.feat2Title"), desc: t("landing.feat2Desc") },
+              { icon: <Globe className="w-6 h-6" />, title: t("landing.feat3Title"), desc: t("landing.feat3Desc") },
+              { icon: <TrendingUp className="w-6 h-6" />, title: t("landing.feat4Title"), desc: t("landing.feat4Desc") },
             ].map((item) => (
               <div key={item.title} className="bg-card rounded-2xl p-6 border border-border flex gap-4 items-start hover:border-primary/50 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                  {item.icon}
-                </div>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">{item.icon}</div>
                 <div>
                   <h3 className="text-lg font-bold font-heading mb-1">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
@@ -184,50 +160,29 @@ const Login = () => {
 
       <div className="h-px glow-line" />
 
-      {/* Sobre */}
       <section id="sobre" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Sobre</p>
-          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            CNB Mobile
-          </h2>
-          <p className="text-muted-foreground max-w-2xl">
-            O CNB Mobile é uma plataforma inovadora que revoluciona a forma como você carrega seu celular. 
-            Nosso app converte o tempo de carregamento em pontos CNB valiosos, criando uma nova economia baseada 
-            no seu consumo diário de energia. Carregue, acumule e suba no ranking — de qualquer lugar do mundo.
-          </p>
+          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.aboutSection")}</p>
+          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.aboutTitle")}</h2>
+          <p className="text-muted-foreground max-w-2xl">{t("landing.aboutDesc")}</p>
         </div>
       </section>
 
       <div className="h-px glow-line" />
 
-      {/* Founder */}
       <section id="founder" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Founder & CEO</p>
+          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.founderSection")}</p>
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex-shrink-0">
-              <img
-                src={ceoImage}
-                alt="Rafael Mariano"
-                className="w-48 h-48 rounded-2xl object-cover border-2 border-primary/30 shadow-elevated"
-              />
+              <img src={ceoImage} alt="Rafael Mariano" className="w-48 h-48 rounded-2xl object-cover border-2 border-primary/30 shadow-elevated" />
             </div>
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl font-black font-heading mb-2">Rafael Mariano</h2>
-              <p className="text-sm font-mono uppercase tracking-widest text-primary mb-4">CEO & Founder — Cripto no Bolso</p>
-              <p className="text-muted-foreground mb-3">
-                Analista de Investimentos CNPI-T, educador, empresário e desenvolvedor de soluções inovadoras no mercado financeiro e cripto. Com passagens por XP Investimentos, Rico e Terra Investimentos, foi condecorado como um dos professores mais influentes da sua região no SENAI.
-              </p>
-              <p className="text-muted-foreground">
-                Idealizador de robôs de investimentos e CopyTrading, Rafael une tecnologia e finanças para criar produtos que transformam a vida das pessoas — como o CNB Mobile.
-              </p>
-              <a
-                href="https://rafaelmariano.com.br"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-sm font-semibold text-primary hover:underline"
-              >
+              <p className="text-sm font-mono uppercase tracking-widest text-primary mb-4">{t("landing.founderRole")}</p>
+              <p className="text-muted-foreground mb-3">{t("landing.founderBio1")}</p>
+              <p className="text-muted-foreground">{t("landing.founderBio2")}</p>
+              <a href="https://rafaelmariano.com.br" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-sm font-semibold text-primary hover:underline">
                 rafaelmariano.com.br →
               </a>
             </div>
@@ -237,55 +192,36 @@ const Login = () => {
 
       <div className="h-px glow-line" />
 
-      {/* CTA */}
       <section id="cta" className="py-20 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">// Baixe agora</p>
-          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">
-            Pronto para ganhar enquanto carrega?
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            Baixe o CNB Mobile e comece a transformar energia em pontos CNB agora mesmo.
-          </p>
-
+          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.ctaSection")}</p>
+          <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.ctaTitle")}</h2>
+          <p className="text-muted-foreground mb-8">{t("landing.ctaDesc")}</p>
           <div className="flex justify-center">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                alt="Disponível no Google Play"
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
-                className="h-14 w-auto"
-              />
+            <a href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2" target="_blank" rel="noopener noreferrer">
+              <img alt={t("landing.googlePlayAlt")} src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" className="h-14 w-auto" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-border py-10 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div>
-              <p className="text-lg font-bold font-heading">
-                <span className="text-primary">CNB</span> Mobile
-              </p>
-              <p className="text-xs text-muted-foreground mt-1">por Cripto no Bolso</p>
-              <p className="text-xs text-muted-foreground mt-1">São Paulo, Brasil</p>
+              <p className="text-lg font-bold font-heading"><span className="text-primary">CNB</span> Mobile</p>
+              <p className="text-xs text-muted-foreground mt-1">{t("landing.footerBy")}</p>
+              <p className="text-xs text-muted-foreground mt-1">{t("landing.footerLocation")}</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
-              <Link to="/terms" className="hover:text-foreground transition-colors">Termos de Serviço</Link>
-              <Link to="/privacy" className="hover:text-foreground transition-colors">Política de Privacidade</Link>
-              <Link to="/privacy-en" className="hover:text-foreground transition-colors">Privacy Policy (EN)</Link>
-              <Link to="/copyright" className="hover:text-foreground transition-colors">Copyright</Link>
-              <Link to="/support" className="hover:text-foreground transition-colors">Suporte</Link>
+              <Link to="/terms" className="hover:text-foreground transition-colors">{t("landing.footerTerms")}</Link>
+              <Link to="/privacy" className="hover:text-foreground transition-colors">{t("landing.footerPrivacy")}</Link>
+              <Link to="/privacy-en" className="hover:text-foreground transition-colors">{t("landing.footerPrivacyEN")}</Link>
+              <Link to="/copyright" className="hover:text-foreground transition-colors">{t("landing.footerCopyright")}</Link>
+              <Link to="/support" className="hover:text-foreground transition-colors">{t("landing.footerSupport")}</Link>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground mt-6">
-            © 2026 CNB Mobile — Cripto no Bolso. Todos os direitos reservados.
-          </p>
+          <p className="text-xs text-muted-foreground mt-6">{t("landing.footerRights")}</p>
         </div>
       </footer>
     </div>
