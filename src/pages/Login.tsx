@@ -273,6 +273,7 @@ const Login = () => {
                 <span className="text-primary">CNB</span> Mobile
               </p>
               <p className="text-xs text-muted-foreground mt-1">por Cripto no Bolso</p>
+              <p className="text-xs text-muted-foreground mt-1">São Paulo, Brasil</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <Link to="/terms" className="hover:text-foreground transition-colors">Termos de Serviço</Link>
