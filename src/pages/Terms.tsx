@@ -15,13 +15,13 @@ const Terms = () => {
         <div className="prose prose-sm text-muted-foreground space-y-4">
           <section>
             <h2 className="text-lg font-semibold text-foreground">1. Aceitação dos Termos</h2>
-            <p>Ao acessar e utilizar o aplicativo CNB Cripto ("App"), você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deverá utilizar o App.</p>
+            <p>Ao acessar e utilizar o aplicativo CNB Mobile ("App"), você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deverá utilizar o App.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-foreground">2. Descrição do Serviço</h2>
-            <p>O CNB Cripto é um aplicativo gamificado que recompensa os usuários com pontos virtuais por acessar o app diariamente. Os pontos são acumulados automaticamente e servem para fins de entretenimento e ranking entre usuários.</p>
-            <p><strong>Os pontos do CNB Cripto NÃO possuem valor monetário real</strong>, não podem ser trocados por dinheiro, criptomoedas, bens ou serviços reais, e não constituem qualquer forma de investimento ou ativo financeiro.</p>
+            <p>O CNB Mobile é um aplicativo gamificado que recompensa os usuários com pontos virtuais por acessar o app diariamente. Os pontos são acumulados automaticamente e servem para fins de entretenimento e ranking entre usuários.</p>
+            <p><strong>Os pontos do CNB Mobile NÃO possuem valor monetário real</strong>, não podem ser trocados por dinheiro, criptomoedas, bens ou serviços reais, e não constituem qualquer forma de investimento ou ativo financeiro.</p>
           </section>
 
           <section>
@@ -52,7 +52,7 @@ const Terms = () => {
 
           <section>
             <h2 className="text-lg font-semibold text-foreground">7. Propriedade Intelectual</h2>
-            <p>Todo o conteúdo do App, incluindo mas não se limitando a textos, gráficos, logos, ícones, imagens e software, é de propriedade exclusiva do CNB Cripto e está protegido pelas leis de propriedade intelectual aplicáveis.</p>
+            <p>Todo o conteúdo do App, incluindo mas não se limitando a textos, gráficos, logos, ícones, imagens e software, é de propriedade exclusiva do CNB Mobile e está protegido pelas leis de propriedade intelectual aplicáveis.</p>
           </section>
 
           <section>

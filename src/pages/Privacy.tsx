@@ -15,7 +15,7 @@ const Privacy = () => {
         <div className="prose prose-sm text-muted-foreground space-y-4">
           <section>
             <h2 className="text-lg font-semibold text-foreground">1. Introdução</h2>
-            <p>O CNB Cripto ("nós", "nosso" ou "App") está comprometido em proteger a privacidade dos nossos usuários. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
+            <p>O CNB Mobile ("nós", "nosso" ou "App") está comprometido em proteger a privacidade dos nossos usuários. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
           </section>
 
           <section>
