@@ -279,6 +279,7 @@ const Login = () => {
               <Link to="/terms" className="hover:text-foreground transition-colors">Termos de Serviço</Link>
               <Link to="/privacy" className="hover:text-foreground transition-colors">Política de Privacidade</Link>
               <Link to="/privacy-en" className="hover:text-foreground transition-colors">Privacy Policy (EN)</Link>
+              <Link to="/copyright" className="hover:text-foreground transition-colors">Copyright</Link>
               <Link to="/support" className="hover:text-foreground transition-colors">Suporte</Link>
             </div>
           </div>
