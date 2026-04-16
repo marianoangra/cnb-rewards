@@ -207,7 +207,7 @@ const Login = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex-shrink-0">
               <img
-                src="https://static.wixstatic.com/media/e1bcaa_aa35adc71bc148f0a68ddd78df65b011~mv2.jpeg/v1/fill/w_395,h_310,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RAFAEL%20MARIANO%20.jpeg"
+                src={ceoImage}
                 alt="Rafael Mariano"
                 className="w-48 h-48 rounded-2xl object-cover border-2 border-primary/30 shadow-elevated"
               />
