@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
-import Login from "./pages/Login";
+
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import PrivacyEN from "./pages/PrivacyEN";
