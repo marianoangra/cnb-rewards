@@ -24,8 +24,8 @@ const Support = () => {
               <p className="text-sm text-muted-foreground mb-2">
                 Para dúvidas, sugestões ou problemas técnicos, envie um e-mail para:
               </p>
-              <a href="mailto:suporte@cnbcripto.com" className="text-primary underline font-medium">
-                suporte@cnbcripto.com
+              <a href="mailto:contato@criptonobolso.com.br" className="text-primary underline font-medium">
+                contato@criptonobolso.com.br
               </a>
               <p className="text-xs text-muted-foreground mt-2">
                 Respondemos em até 48 horas úteis.
@@ -51,7 +51,7 @@ const Support = () => {
               </div>
               <div>
                 <p className="text-sm font-medium text-foreground">Como excluo minha conta?</p>
-                <p className="text-sm text-muted-foreground">Envie um e-mail para suporte@cnbcripto.com solicitando a exclusão. Processaremos em até 30 dias.</p>
+                <p className="text-sm text-muted-foreground">Envie um e-mail para contato@criptonobolso.com.br solicitando a exclusão. Processaremos em até 30 dias.</p>
               </div>
               <div>
                 <p className="text-sm font-medium text-foreground">O app coleta dados sensíveis?</p>
