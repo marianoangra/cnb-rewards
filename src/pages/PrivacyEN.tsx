@@ -87,7 +87,7 @@ const PrivacyEN = () => {
               <li><strong>Portability:</strong> receive your data in a structured format;</li>
               <li><strong>Objection:</strong> object to the processing of your data.</li>
             </ul>
-            <p>To exercise any of these rights, contact us at: <a href="mailto:suporte@cnbcripto.com" className="text-primary underline">suporte@cnbcripto.com</a></p>
+            <p>To exercise any of these rights, contact us at: <a href="mailto:contato@criptonobolso.com.br" className="text-primary underline">contato@criptonobolso.com.br</a></p>
           </section>
 
           <section>
@@ -113,7 +113,7 @@ const PrivacyEN = () => {
           <section>
             <h2 className="text-lg font-semibold text-foreground">12. Contact</h2>
             <p>For questions about this Privacy Policy or your personal data, please contact:</p>
-            <p>Email: <a href="mailto:suporte@cnbcripto.com" className="text-primary underline">suporte@cnbcripto.com</a></p>
+            <p>Email: <a href="mailto:contato@criptonobolso.com.br" className="text-primary underline">contato@criptonobolso.com.br</a></p>
           </section>
 
           <section>

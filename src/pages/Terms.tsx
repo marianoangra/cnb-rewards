@@ -72,7 +72,7 @@ const Terms = () => {
 
           <section>
             <h2 className="text-lg font-semibold text-foreground">11. Contato</h2>
-            <p>Em caso de dúvidas sobre estes Termos de Uso, entre em contato pelo e-mail: <a href="mailto:suporte@cnbcripto.com" className="text-primary underline">suporte@cnbcripto.com</a></p>
+            <p>Em caso de dúvidas sobre estes Termos de Uso, entre em contato pelo e-mail: <a href="mailto:contato@criptonobolso.com.br" className="text-primary underline">contato@criptonobolso.com.br</a></p>
           </section>
         </div>
       </div>

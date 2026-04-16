@@ -87,7 +87,7 @@ const Privacy = () => {
               <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado;</li>
               <li><strong>Oposição:</strong> opor-se ao processamento dos seus dados.</li>
             </ul>
-            <p>Para exercer qualquer destes direitos, entre em contato pelo e-mail: <a href="mailto:suporte@cnbcripto.com" className="text-primary underline">suporte@cnbcripto.com</a></p>
+            <p>Para exercer qualquer destes direitos, entre em contato pelo e-mail: <a href="mailto:contato@criptonobolso.com.br" className="text-primary underline">contato@criptonobolso.com.br</a></p>
           </section>
 
           <section>
@@ -113,7 +113,7 @@ const Privacy = () => {
           <section>
             <h2 className="text-lg font-semibold text-foreground">12. Contato</h2>
             <p>Para dúvidas sobre esta Política de Privacidade ou sobre seus dados pessoais, entre em contato:</p>
-            <p>E-mail: <a href="mailto:suporte@cnbcripto.com" className="text-primary underline">suporte@cnbcripto.com</a></p>
+            <p>E-mail: <a href="mailto:contato@criptonobolso.com.br" className="text-primary underline">contato@criptonobolso.com.br</a></p>
           </section>
 
           <section>
