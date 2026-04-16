@@ -42,6 +42,7 @@ const Login = () => {
             <a href="#funcionalidades" className="hover:text-foreground transition-colors">Funcionalidades</a>
             <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
           </div>
+        </div>
       </nav>
 
       {/* Hero */}
