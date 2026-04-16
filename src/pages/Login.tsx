@@ -5,6 +5,7 @@ import { lovable } from "@/integrations/lovable";
 import { Button } from "@/components/ui/button";
 import { Zap, Trophy, Gamepad2, Globe, TrendingUp, Shield, BatteryCharging, Smartphone } from "lucide-react";
 import { toast } from "sonner";
+import ceoImage from "@/assets/ceo-rafael.jpg";
 
 const Login = () => {
   const { user, loading } = useAuth();
