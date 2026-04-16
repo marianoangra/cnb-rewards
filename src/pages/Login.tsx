@@ -42,16 +42,6 @@ const Login = () => {
             <a href="#funcionalidades" className="hover:text-foreground transition-colors">Funcionalidades</a>
             <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
           </div>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="sm" className="rounded-full px-6 font-semibold">
-              Google Play
-            </Button>
-          </a>
-        </div>
       </nav>
 
       {/* Hero */}
