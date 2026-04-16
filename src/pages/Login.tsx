@@ -120,7 +120,7 @@ const Login = () => {
         <div className="max-w-6xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: "Gratuito", value: "100%", icon: "💎" },
-            { label: "Downloads", value: "50K+", icon: "📲" },
+            { label: "Downloads", value: "50 mil+", icon: "📲" },
             { label: "Plataforma", value: "Global", icon: "🌍" },
             { label: "Inovação", value: "BR", icon: "🇧🇷" },
           ].map((s) => (
