@@ -15,6 +15,8 @@ export default {
     howSection: "// Wie es funktioniert",
     howTitle: "Einfach: laden und verdienen",
     howDesc: "Drei Schritte, um das Laden deines Handys in CNB-Punkte zu verwandeln.",
+    communityTitle: "Werde Teil unserer Community",
+    communityDesc: "Mehr als eine App – wir sind eine Community. Schließe dich Tausenden an, die bereits CNB verdienen und Krypto-Erfahrungen teilen.",
     step1Title: "Lade CNB Mobile herunter",
     step1Desc: "Installiere die App auf deinem Smartphone. Verfügbar für Android und iOS, ohne Aufwand.",
     step2Title: "Zum Laden anschließen",

@@ -15,6 +15,8 @@ export default {
     howSection: "// Comment ça marche",
     howTitle: "Simple : chargez et gagnez",
     howDesc: "Trois étapes pour transformer la charge de votre téléphone en points CNB.",
+    communityTitle: "Rejoignez notre communauté",
+    communityDesc: "Plus qu'une app, nous sommes une communauté. Rejoignez des milliers de personnes qui gagnent déjà des CNB et partagent leurs expériences crypto.",
     step1Title: "Téléchargez CNB Mobile",
     step1Desc: "Installez l'app sur votre smartphone. Disponible pour Android et iOS, sans tracas.",
     step2Title: "Branchez pour charger",
