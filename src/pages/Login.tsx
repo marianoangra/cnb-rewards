@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { lovable } from "@/integrations/lovable";
-import { Globe, TrendingUp, Shield, BatteryCharging, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Globe, TrendingUp, Shield, BatteryCharging, Instagram, Linkedin, Twitter, MessageCircle, Send, Users } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -127,6 +127,45 @@ const Login = () => {
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 bg-card rounded-2xl p-8 border border-primary/30">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold font-heading">{t("landing.communityTitle")}</h3>
+            </div>
+            <p className="text-sm text-muted-foreground mb-6">{t("landing.communityDesc")}</p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://chat.whatsapp.com/GsIEmnUPKsn2W95HEjPwW8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border bg-background hover:border-primary/50 hover:text-primary transition-colors text-sm font-semibold"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </a>
+              <a
+                href="https://t.me/grupcriptocnb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border bg-background hover:border-primary/50 hover:text-primary transition-colors text-sm font-semibold"
+              >
+                <Send className="w-4 h-4" />
+                Telegram
+              </a>
+              <a
+                href="https://instagram.com/criptonobolso"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border bg-background hover:border-primary/50 hover:text-primary transition-colors text-sm font-semibold"
+              >
+                <Instagram className="w-4 h-4" />
+                @criptonobolso
+              </a>
+            </div>
           </div>
         </div>
       </section>
