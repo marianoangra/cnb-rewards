@@ -71,22 +71,23 @@ const Login = () => {
           </div>
 
           <div className="flex-shrink-0">
-            <div className="w-64 md:w-72 rounded-[2rem] border-2 border-primary/30 bg-card p-6 shadow-elevated relative">
-              <div className="w-20 h-1 rounded-full bg-primary/30 mx-auto mb-6" />
-              <div className="flex flex-col items-center gap-4">
-                <img src={logoCnb} alt="CNB Mobile logo" className="w-16 h-16 rounded-2xl" />
-                <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">CNB Mobile</p>
-                <p className="text-xs text-muted-foreground">{t("landing.phoneCharging")}</p>
-                <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
-                  <div className="w-3/4 h-full rounded-full bg-primary animate-pulse" />
-                </div>
-                <p className="text-2xl font-black font-heading text-primary">+10 CNB</p>
-                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">{t("landing.phonePointsToday")}</p>
-                <div className="w-full rounded-xl border border-border p-3 text-center mt-2">
-                  <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">{t("landing.phoneTotalBalance")}</p>
-                  <p className="text-xl font-black font-heading text-primary">347.5 CNB</p>
-                </div>
-              </div>
+            <div
+              className="relative w-72 md:w-[340px] h-[500px] rounded-[2.5rem] overflow-hidden shadow-elevated"
+              style={{
+                background:
+                  "radial-gradient(circle at 20% 20%, #FFD6E8, transparent 55%), radial-gradient(circle at 85% 30%, #FFE8C7, transparent 50%), radial-gradient(circle at 50% 90%, #D6E4FF, transparent 60%), linear-gradient(135deg, #FCE4F1 0%, #E8E4FC 50%, #DCEEFB 100%)",
+              }}
+            >
+              <div className="absolute top-6 left-6 w-32 h-32 rounded-full bg-white/40 blur-3xl" />
+              <div className="absolute bottom-10 right-8 w-40 h-40 rounded-full bg-[#FFD6E8]/60 blur-3xl" />
+              <img
+                src={phoneMockup}
+                alt={t("landing.phoneCharging")}
+                loading="eager"
+                width={1024}
+                height={1024}
+                className="absolute inset-0 w-full h-full object-contain object-center drop-shadow-2xl pointer-events-none select-none"
+              />
             </div>
           </div>
         </div>
