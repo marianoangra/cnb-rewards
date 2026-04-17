@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { lovable } from "@/integrations/lovable";
-import { Globe, TrendingUp, Shield, BatteryCharging } from "lucide-react";
+import { Globe, TrendingUp, Shield, BatteryCharging, Instagram, Linkedin, Twitter } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
