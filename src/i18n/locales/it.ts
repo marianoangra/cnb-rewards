@@ -15,6 +15,8 @@ export default {
     howSection: "// Come funziona",
     howTitle: "Semplice: carica e guadagna",
     howDesc: "Tre passaggi per trasformare la ricarica del tuo cellulare in punti CNB.",
+    communityTitle: "Unisciti alla nostra community",
+    communityDesc: "Più di un'app, siamo una community. Unisciti a migliaia di persone che già guadagnano CNB e condividono esperienze sul mondo cripto.",
     step1Title: "Scarica CNB Mobile",
     step1Desc: "Installa l'app sul tuo smartphone. Disponibile per Android e iOS, senza problemi.",
     step2Title: "Mettilo in carica",
