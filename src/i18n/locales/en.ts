@@ -51,7 +51,7 @@ export default {
     aboutDesc: "CNB Mobile is an innovative platform that revolutionizes how you charge your phone. Our app converts charging time into valuable CNB points, creating a new economy based on your daily energy consumption. Charge, accumulate and climb the ranking — from anywhere in the world.",
     founderSection: "// Founder & CEO",
     founderRole: "CEO & Founder — Cripto no Bolso",
-    founderBio1: "CNPI-T Investment Analyst, educator, entrepreneur and developer of innovative solutions in the financial and crypto markets. Having worked at XP Investimentos, Rico and Terra Investimentos, he was honored as one of the most influential teachers in his region at SENAI.",
+    founderBio1: "CNPI Investment Analyst, Helicopter Pilot, educator, entrepreneur and developer of innovative solutions in the financial and crypto markets. Having worked at XP Investimentos, Rico and Terra Investimentos, he was honored as one of the most influential teachers in his region at SENAI.",
     founderBio2: "Creator of investment robots and CopyTrading, Rafael combines technology and finance to build products that transform people's lives — like CNB Mobile.",
     ctaSection: "// Download now",
     ctaTitle: "Ready to earn while you charge?",
