@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ceoImage from "@/assets/ceo-rafael.jpg";
 import logoCnb from "@/assets/logo-cnb.png";
-import phoneScreen from "@/assets/phone-screen.png";
+import appScreen from "@/assets/app-screen-carregando.png";
 
 const Login = () => {
   const { user, loading } = useAuth();
@@ -70,20 +70,53 @@ const Login = () => {
             </div>
           </div>
 
-          <div className="flex-shrink-0">
-            <div className="relative w-72 md:w-[340px] mx-auto">
-              {/* Phone frame */}
-              <div className="relative rounded-[3rem] bg-gradient-to-b from-zinc-800 to-black p-3 shadow-elevated border border-zinc-700">
-                {/* Screen */}
-                <div className="relative rounded-[2.25rem] overflow-hidden aspect-[9/19] bg-black">
-                  {/* Notch */}
-                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-10" />
-                  <img
-                    src={phoneScreen}
-                    alt={t("landing.phoneCharging")}
-                    loading="eager"
-                    className="w-full h-full object-cover"
-                  />
+          <div className="flex-shrink-0 flex items-center justify-center">
+            <div className="relative">
+              {/* Ambient glow behind phone */}
+              <div className="absolute inset-0 -m-12 rounded-full bg-primary/30 blur-3xl opacity-60 pointer-events-none" />
+              <div className="absolute inset-0 -m-8 rounded-full bg-primary/20 blur-2xl pointer-events-none" />
+
+              {/* Phone device */}
+              <div className="relative w-[280px] md:w-[320px]">
+                {/* Outer frame with metallic gradient */}
+                <div
+                  className="relative rounded-[3rem] p-[3px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8),0_0_60px_-10px_hsl(var(--primary)/0.4)]"
+                  style={{
+                    background:
+                      "linear-gradient(145deg, #4a4a4a 0%, #1a1a1a 25%, #2a2a2a 50%, #0a0a0a 75%, #3a3a3a 100%)",
+                  }}
+                >
+                  {/* Inner bezel */}
+                  <div className="rounded-[2.85rem] bg-black p-[6px]">
+                    {/* Screen container */}
+                    <div className="relative rounded-[2.5rem] overflow-hidden aspect-[9/19.5] bg-black">
+                      {/* Dynamic Island / Notch */}
+                      <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-full z-20 shadow-inner" />
+
+                      {/* App screen image */}
+                      <img
+                        src={appScreen}
+                        alt={t("landing.phoneCharging")}
+                        loading="eager"
+                        className="w-full h-full object-cover object-top"
+                      />
+
+                      {/* Subtle screen glare overlay */}
+                      <div
+                        className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-40"
+                        style={{
+                          background:
+                            "linear-gradient(115deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.08) 100%)",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Side buttons */}
+                  <div className="absolute -left-[3px] top-[110px] w-[3px] h-8 bg-zinc-700 rounded-l-sm" />
+                  <div className="absolute -left-[3px] top-[160px] w-[3px] h-12 bg-zinc-700 rounded-l-sm" />
+                  <div className="absolute -left-[3px] top-[210px] w-[3px] h-12 bg-zinc-700 rounded-l-sm" />
+                  <div className="absolute -right-[3px] top-[170px] w-[3px] h-16 bg-zinc-700 rounded-r-sm" />
                 </div>
               </div>
             </div>
