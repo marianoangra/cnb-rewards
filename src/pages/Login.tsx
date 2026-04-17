@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { lovable } from "@/integrations/lovable";
-import { Globe, TrendingUp, Shield, BatteryCharging, Instagram, Linkedin, Twitter, MessageCircle, Send, Users } from "lucide-react";
+import { Globe, TrendingUp, Shield, BatteryCharging, Instagram, Linkedin, MessageCircle, Send, Users } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -163,6 +163,18 @@ const Login = () => {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border bg-background hover:border-primary/50 hover:text-primary transition-colors text-sm font-semibold"
               >
                 <Instagram className="w-4 h-4" />
+                @criptonobolso
+              </a>
+              <a
+                href="https://x.com/criptonobolso"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (antigo Twitter) @criptonobolso"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border bg-background hover:border-primary/50 hover:text-primary transition-colors text-sm font-semibold"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="w-4 h-4 fill-current">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
                 @criptonobolso
               </a>
             </div>
