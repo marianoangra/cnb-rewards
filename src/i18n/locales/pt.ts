@@ -12,8 +12,8 @@ export default {
   },
   landing: {
     badge: "Carregue e Ganhe",
-    heroTitle1: "Carregue seu celular.",
-    heroTitle2: "Ganhe pontos CNB.",
+    heroTitle1: "Carregue seu celular",
+    heroTitle2: "Ganhe pontos CNB",
     heroDesc: "O CNB Mobile transforma o tempo de carregamento do seu celular em pontos CNB. Uma nova economia baseada no seu consumo diário de energia — de qualquer lugar do mundo.",
     googlePlayAlt: "Disponível no Google Play",
     phoneCharging: "Carregando…",
