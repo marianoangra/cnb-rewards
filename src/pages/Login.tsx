@@ -71,15 +71,21 @@ const Login = () => {
           </div>
 
           <div className="flex-shrink-0">
-            <div className="relative w-72 md:w-[340px] h-[500px]">
-              <img
-                src={phoneMockup}
-                alt={t("landing.phoneCharging")}
-                loading="eager"
-                width={1024}
-                height={1024}
-                className="w-full h-full object-contain object-center drop-shadow-2xl pointer-events-none select-none"
-              />
+            <div className="relative w-72 md:w-[340px] mx-auto">
+              {/* Phone frame */}
+              <div className="relative rounded-[3rem] bg-gradient-to-b from-zinc-800 to-black p-3 shadow-elevated border border-zinc-700">
+                {/* Screen */}
+                <div className="relative rounded-[2.25rem] overflow-hidden aspect-[9/19] bg-black">
+                  {/* Notch */}
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-10" />
+                  <img
+                    src={phoneScreen}
+                    alt={t("landing.phoneCharging")}
+                    loading="eager"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
