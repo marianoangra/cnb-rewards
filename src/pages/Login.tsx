@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ceoImage from "@/assets/ceo-rafael.jpg";
 import logoCnb from "@/assets/logo-cnb.png";
-import phoneMockup from "@/assets/phone-mockup.png";
+import phoneScreen from "@/assets/phone-screen.png";
 
 const Login = () => {
   const { user, loading } = useAuth();
