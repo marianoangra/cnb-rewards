@@ -280,10 +280,6 @@ const Login = () => {
               <Link to="/privacy-en" className="hover:text-foreground transition-colors">{t("landing.footerPrivacyEN")}</Link>
               <Link to="/copyright" className="hover:text-foreground transition-colors">{t("landing.footerCopyright")}</Link>
               <Link to="/support" className="hover:text-foreground transition-colors">{t("landing.footerSupport")}</Link>
-              <a href="https://x.com/criptonobolso" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
-                <Twitter className="w-4 h-4" />
-                @criptonobolso
-              </a>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-border flex flex-col gap-2">
