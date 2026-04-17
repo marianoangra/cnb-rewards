@@ -127,21 +127,21 @@ const HomePage = () => {
                 className="relative px-6 pt-8 pb-0 flex items-end justify-center min-h-[420px]"
                 style={{
                   background:
-                    "radial-gradient(circle at 20% 20%, hsl(var(--primary) / 0.9), transparent 55%), radial-gradient(circle at 85% 30%, hsl(var(--reward) / 0.7), transparent 50%), linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)",
+                    "radial-gradient(circle at 20% 20%, #FFD6E8, transparent 55%), radial-gradient(circle at 85% 30%, #FFE8C7, transparent 50%), radial-gradient(circle at 50% 90%, #D6E4FF, transparent 60%), linear-gradient(135deg, #FCE4F1 0%, #E8E4FC 50%, #DCEEFB 100%)",
                 }}
               >
                 {/* Decorative blurred blobs */}
-                <div className="absolute top-6 left-6 w-32 h-32 rounded-full bg-white/20 blur-3xl" />
-                <div className="absolute bottom-10 right-8 w-40 h-40 rounded-full bg-reward/30 blur-3xl" />
+                <div className="absolute top-6 left-6 w-32 h-32 rounded-full bg-white/40 blur-3xl" />
+                <div className="absolute bottom-10 right-8 w-40 h-40 rounded-full bg-[#FFD6E8]/60 blur-3xl" />
 
-                <div className="relative z-10 text-center text-primary-foreground pb-6">
-                  <p className="text-xs font-semibold uppercase tracking-widest opacity-80 mb-2">
+                <div className="relative z-10 text-center text-foreground pb-6">
+                  <p className="text-xs font-semibold uppercase tracking-widest opacity-70 mb-2">
                     Cripto no Bolso
                   </p>
                   <h3 className="text-2xl font-black leading-tight mb-1">
                     Ganhe pontos<br />todos os dias
                   </h3>
-                  <p className="text-sm opacity-90 max-w-[240px] mx-auto">
+                  <p className="text-sm opacity-80 max-w-[240px] mx-auto">
                     Faça check-in diário e suba no ranking da comunidade
                   </p>
                 </div>
