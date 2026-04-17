@@ -77,7 +77,7 @@ const Login = () => {
               <div className="absolute inset-0 -m-8 rounded-full bg-primary/20 blur-2xl pointer-events-none" />
 
               {/* Phone device */}
-              <div className="relative w-[280px] md:w-[320px]">
+              <div className="relative w-[196px] md:w-[224px] animate-float">
                 {/* Outer frame with metallic gradient */}
                 <div
                   className="relative rounded-[3rem] p-[3px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8),0_0_60px_-10px_hsl(var(--primary)/0.4)]"
