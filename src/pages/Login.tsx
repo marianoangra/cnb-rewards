@@ -274,7 +274,15 @@ const Login = () => {
               </a>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground mt-6">{t("landing.footerRights")}</p>
+          <div className="mt-8 pt-6 border-t border-border flex flex-col gap-2">
+            <p className="text-xs text-muted-foreground">
+              {t("landing.footerBuiltWith")} <span className="text-foreground font-semibold">Claude.ai</span>, <span className="text-foreground font-semibold">Grok.ai</span>, <span className="text-foreground font-semibold">Firebase</span> {t("landing.footerAnd")} <span className="text-foreground font-semibold">Lovable</span>.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {t("landing.footerSupportedBy")} <span className="text-foreground font-semibold">SuperTeam Brasil Solana</span> {t("landing.footerAnd")} <span className="text-foreground font-semibold">Cultura Builder</span>.
+            </p>
+            <p className="text-xs text-muted-foreground mt-2">{t("landing.footerRights")}</p>
+          </div>
         </div>
       </footer>
     </div>
