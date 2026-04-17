@@ -9,7 +9,6 @@ import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import phoneMockup from "@/assets/phone-mockup.png";
 
 const HomePage = () => {
   const { user, signOut } = useAuth();
@@ -120,42 +119,6 @@ const HomePage = () => {
             >
               {todayCheckedIn ? t("home.checkinDone") : checkinLoading ? t("home.checkinLoading") : t("home.checkinAction")}
             </Button>
-
-            {/* Phone Mockup Showcase */}
-            <div className="relative mt-6 rounded-3xl overflow-hidden shadow-elevated">
-              <div
-                className="relative px-6 pt-8 pb-0 flex items-end justify-center min-h-[420px]"
-                style={{
-                  background:
-                    "radial-gradient(circle at 20% 20%, #FFD6E8, transparent 55%), radial-gradient(circle at 85% 30%, #FFE8C7, transparent 50%), radial-gradient(circle at 50% 90%, #D6E4FF, transparent 60%), linear-gradient(135deg, #FCE4F1 0%, #E8E4FC 50%, #DCEEFB 100%)",
-                }}
-              >
-                {/* Decorative blurred blobs */}
-                <div className="absolute top-6 left-6 w-32 h-32 rounded-full bg-white/40 blur-3xl" />
-                <div className="absolute bottom-10 right-8 w-40 h-40 rounded-full bg-[#FFD6E8]/60 blur-3xl" />
-
-                <div className="relative z-10 text-center text-foreground pb-6">
-                  <p className="text-xs font-semibold uppercase tracking-widest opacity-70 mb-2">
-                    Cripto no Bolso
-                  </p>
-                  <h3 className="text-2xl font-black leading-tight mb-1">
-                    Ganhe pontos<br />todos os dias
-                  </h3>
-                  <p className="text-sm opacity-80 max-w-[240px] mx-auto">
-                    Faça check-in diário e suba no ranking da comunidade
-                  </p>
-                </div>
-
-                <img
-                  src={phoneMockup}
-                  alt="Mockup do app CNB no celular"
-                  loading="lazy"
-                  width={1024}
-                  height={1024}
-                  className="absolute -bottom-10 right-0 w-56 sm:w-64 drop-shadow-2xl rotate-6 pointer-events-none select-none"
-                />
-              </div>
-            </div>
           </div>
         ) : (
           <div className="flex flex-col gap-3 mt-4">
