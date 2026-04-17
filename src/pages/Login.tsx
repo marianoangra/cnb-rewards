@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { lovable } from "@/integrations/lovable";
-import { Globe, TrendingUp, Shield, BatteryCharging } from "lucide-react";
+import { Globe, TrendingUp, Shield, BatteryCharging, Instagram, Linkedin, Twitter } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -185,6 +185,16 @@ const Login = () => {
               <a href="https://rafaelmariano.com.br" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-sm font-semibold text-primary hover:underline">
                 rafaelmariano.com.br →
               </a>
+              <div className="flex flex-wrap gap-4 mt-3">
+                <a href="https://instagram.com/rafaelmariano" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Instagram className="w-4 h-4" />
+                  @rafaelmariano
+                </a>
+                <a href="https://www.linkedin.com/in/palestranterafaelmariano/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-4 h-4" />
+                  palestranterafaelmariano
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -219,6 +229,10 @@ const Login = () => {
               <Link to="/privacy-en" className="hover:text-foreground transition-colors">{t("landing.footerPrivacyEN")}</Link>
               <Link to="/copyright" className="hover:text-foreground transition-colors">{t("landing.footerCopyright")}</Link>
               <Link to="/support" className="hover:text-foreground transition-colors">{t("landing.footerSupport")}</Link>
+              <a href="https://x.com/criptonobolso" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+                <Twitter className="w-4 h-4" />
+                @criptonobolso
+              </a>
             </div>
           </div>
           <p className="text-xs text-muted-foreground mt-6">{t("landing.footerRights")}</p>
