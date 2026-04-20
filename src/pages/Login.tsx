@@ -64,12 +64,32 @@ const Login = () => {
               <span className="text-primary">{t("landing.heroTitle2")}</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">{t("landing.heroDesc")}</p>
-            <div className="flex flex-wrap gap-3">
-              <a href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2" target="_blank" rel="noopener noreferrer">
-                <img alt={t("landing.googlePlayAlt")} src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" className="h-14 w-auto" />
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={t("landing.googlePlayAlt")}
+                className="inline-flex h-14 items-center justify-center rounded-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <img
+                  alt={t("landing.googlePlayAlt")}
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
+                  className="h-full w-auto object-contain"
+                />
               </a>
-              <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
-                <img alt="Baixar na App Store" src={appStoreBadge} className="h-14 w-auto" />
+              <a
+                href="https://apps.apple.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Baixar na App Store"
+                className="inline-flex h-[46px] items-center justify-center rounded-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <img
+                  alt="Baixar na App Store"
+                  src={appStoreBadge}
+                  className="h-full w-auto object-contain"
+                />
               </a>
             </div>
           </div>
@@ -295,12 +315,32 @@ const Login = () => {
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.ctaSection")}</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.ctaTitle")}</h2>
           <p className="text-muted-foreground mb-8">{t("landing.ctaDesc")}</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2" target="_blank" rel="noopener noreferrer">
-              <img alt={t("landing.googlePlayAlt")} src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" className="h-14 w-auto" />
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("landing.googlePlayAlt")}
+              className="inline-flex h-14 items-center justify-center rounded-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <img
+                alt={t("landing.googlePlayAlt")}
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
+                className="h-full w-auto object-contain"
+              />
             </a>
-            <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
-              <img alt="Baixar na App Store" src={appStoreBadge} className="h-14 w-auto" />
+            <a
+              href="https://apps.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Baixar na App Store"
+              className="inline-flex h-[46px] items-center justify-center rounded-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <img
+                alt="Baixar na App Store"
+                src={appStoreBadge}
+                className="h-full w-auto object-contain"
+              />
             </a>
           </div>
         </div>
