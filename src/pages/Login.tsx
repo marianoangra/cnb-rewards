@@ -9,6 +9,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ceoImage from "@/assets/ceo-rafael.jpg";
 import logoCnb from "@/assets/logo-cnb.png";
 import appScreen from "@/assets/app-screen-carregando.png";
+import appStoreBadge from "@/assets/app-store-badge.avif";
 
 const Login = () => {
   const { user, loading } = useAuth();
@@ -66,6 +67,9 @@ const Login = () => {
             <div className="flex flex-wrap gap-3">
               <a href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2" target="_blank" rel="noopener noreferrer">
                 <img alt={t("landing.googlePlayAlt")} src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" className="h-14 w-auto" />
+              </a>
+              <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
+                <img alt="Baixar na App Store" src={appStoreBadge} className="h-14 w-auto" />
               </a>
             </div>
           </div>
@@ -291,9 +295,12 @@ const Login = () => {
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.ctaSection")}</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.ctaTitle")}</h2>
           <p className="text-muted-foreground mb-8">{t("landing.ctaDesc")}</p>
-          <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-3">
             <a href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2" target="_blank" rel="noopener noreferrer">
               <img alt={t("landing.googlePlayAlt")} src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" className="h-14 w-auto" />
+            </a>
+            <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">
+              <img alt="Baixar na App Store" src={appStoreBadge} className="h-14 w-auto" />
             </a>
           </div>
         </div>
