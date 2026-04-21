@@ -11,7 +11,7 @@ export default {
     phonePointsToday: "Puntos ganados hoy",
     phoneTotalBalance: "Saldo Total",
     statsFree: "Gratis", statsDownloads: "Descargas", statsPlatform: "Plataforma", statsInnovation: "Innovación",
-    statsPlatformValue: "Global", statsInnovationValue: "BR", statsDownloadsValue: "50 mil+",
+    statsPlatformValue: "Global", statsInnovationValue: "BR", statsDownloadsValue: "+10 mil",
     howSection: "// Cómo funciona",
     howTitle: "Simple: carga y gana",
     howDesc: "Tres pasos para transformar la carga de tu móvil en puntos CNB.",

@@ -11,7 +11,7 @@ export default {
     phonePointsToday: "Heute verdiente Punkte",
     phoneTotalBalance: "Gesamtsaldo",
     statsFree: "Kostenlos", statsDownloads: "Downloads", statsPlatform: "Plattform", statsInnovation: "Innovation",
-    statsPlatformValue: "Global", statsInnovationValue: "BR", statsDownloadsValue: "50k+",
+    statsPlatformValue: "Global", statsInnovationValue: "BR", statsDownloadsValue: "10k+",
     howSection: "// Wie es funktioniert",
     howTitle: "Einfach: laden und verdienen",
     howDesc: "Drei Schritte, um das Laden deines Handys in CNB-Punkte zu verwandeln.",
