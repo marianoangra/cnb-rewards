@@ -11,7 +11,7 @@ export default {
     phonePointsToday: "Punti guadagnati oggi",
     phoneTotalBalance: "Saldo Totale",
     statsFree: "Gratuito", statsDownloads: "Download", statsPlatform: "Piattaforma", statsInnovation: "Innovazione",
-    statsPlatformValue: "Globale", statsInnovationValue: "BR", statsDownloadsValue: "50k+",
+    statsPlatformValue: "Globale", statsInnovationValue: "BR", statsDownloadsValue: "+10 mila",
     howSection: "// Come funziona",
     howTitle: "Semplice: carica e guadagna",
     howDesc: "Tre passaggi per trasformare la ricarica del tuo cellulare in punti CNB.",

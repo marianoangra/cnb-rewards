@@ -25,7 +25,7 @@ export default {
     statsInnovation: "Innovation",
     statsPlatformValue: "Global",
     statsInnovationValue: "BR",
-    statsDownloadsValue: "50k+",
+    statsDownloadsValue: "10k+",
     howSection: "// How it works",
     howTitle: "Simple: charge and earn",
     howDesc: "Three steps to turn your phone charging into CNB points.",

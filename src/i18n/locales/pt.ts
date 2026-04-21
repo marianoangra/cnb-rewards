@@ -25,7 +25,7 @@ export default {
     statsInnovation: "Inovação",
     statsPlatformValue: "Global",
     statsInnovationValue: "BR",
-    statsDownloadsValue: "50 mil+",
+    statsDownloadsValue: "+10 mil",
     howSection: "// Como funciona",
     howTitle: "Simples: carregue e ganhe",
     howDesc: "Três passos para transformar o carregamento do seu celular em pontos CNB.",
