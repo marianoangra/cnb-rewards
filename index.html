@@ -14,6 +14,24 @@
     <link rel="canonical" href="https://www.cnbmobile.com/" />
     <link rel="icon" href="/favicon.png" type="image/png" />
 
+    <!-- hreflang: international targeting -->
+    <link rel="alternate" hreflang="pt-BR" href="https://www.cnbmobile.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.cnbmobile.com/?lang=en" />
+    <link rel="alternate" hreflang="es" href="https://www.cnbmobile.com/?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://www.cnbmobile.com/?lang=fr" />
+    <link rel="alternate" hreflang="de" href="https://www.cnbmobile.com/?lang=de" />
+    <link rel="alternate" hreflang="it" href="https://www.cnbmobile.com/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.cnbmobile.com/" />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3J00EKH60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S3J00EKH60', { anonymize_ip: true });
+    </script>
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="CNB Mobile" />
@@ -54,7 +72,28 @@
       "description": "App que transforma o tempo de carregamento do celular em pontos conversíveis em PIX. +10 pts/min, +50 pts por hora completa, +100 pts por amigo indicado.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
       "downloadUrl": "https://play.google.com/store/apps/details?id=com.cnb.cnbappv2",
-      "inLanguage": "pt-BR"
+      "inLanguage": "pt-BR",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "100",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.cnbmobile.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Suporte", "item": "https://www.cnbmobile.com/support" },
+        { "@type": "ListItem", "position": 3, "name": "Privacidade", "item": "https://www.cnbmobile.com/privacy" },
+        { "@type": "ListItem", "position": 4, "name": "Termos", "item": "https://www.cnbmobile.com/terms" }
+      ]
     }
     </script>
 
