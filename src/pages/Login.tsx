@@ -64,7 +64,7 @@ const Login = () => {
               <span className="text-primary">{t("landing.heroTitle2")}</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">{t("landing.heroDesc")}</p>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <a
                 href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
                 target="_blank"
@@ -315,7 +315,7 @@ const Login = () => {
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{t("landing.ctaSection")}</p>
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.ctaTitle")}</h2>
           <p className="text-muted-foreground mb-8">{t("landing.ctaDesc")}</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             <a
               href="https://play.google.com/store/apps/details?id=com.cnb.cnbappv2"
               target="_blank"
