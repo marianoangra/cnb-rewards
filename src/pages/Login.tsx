@@ -83,7 +83,7 @@ const Login = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Baixar na App Store"
-                className="inline-flex h-[46px] items-center justify-center rounded-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="inline-flex h-14 items-center justify-center rounded-xl bg-white px-3 py-2 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 <img
                   alt="Baixar na App Store"
@@ -334,7 +334,7 @@ const Login = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Baixar na App Store"
-              className="inline-flex h-[46px] items-center justify-center rounded-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="inline-flex h-14 items-center justify-center rounded-xl bg-white px-3 py-2 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <img
                 alt="Baixar na App Store"
