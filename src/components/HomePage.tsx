@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -150,6 +151,15 @@ const HomePage = () => {
           </div>
         )}
       </main>
+
+      {/* Footer legal links */}
+      <footer className="px-5 pb-28 pt-2">
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+          <Link to="/terms" className="hover:text-foreground transition-colors">{t("landing.footerTerms")}</Link>
+          <Link to="/privacy" className="hover:text-foreground transition-colors">{t("landing.footerPrivacy")}</Link>
+          <Link to="/support" className="hover:text-foreground transition-colors">{t("landing.footerSupport")}</Link>
+        </div>
+      </footer>
 
       {/* Bottom Tab Bar */}
       <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-border px-6 pb-6 pt-3 flex justify-around">
