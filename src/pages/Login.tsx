@@ -413,21 +413,19 @@ const Login = () => {
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-border flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground">
+            <a
+              href="https://solana.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Powered by Solana"
+              className="group inline-flex items-center gap-4 self-start rounded-2xl border border-border bg-card px-5 py-3 transition-all hover:border-primary/50 hover:shadow-elevated hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground group-hover:text-foreground transition-colors">
                 Powered by
               </span>
-              <span className="h-4 w-px bg-border" aria-hidden="true" />
-              <a
-                href="https://solana.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Solana"
-                className="inline-flex items-center transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
-              >
-                <img src={solanaLogo} alt="Solana" className="h-4 w-auto" />
-              </a>
-            </div>
+              <span className="h-6 w-px bg-border" aria-hidden="true" />
+              <img src={solanaLogo} alt="Solana" className="h-5 w-auto" />
+            </a>
             <p className="text-xs text-muted-foreground">
               {t("landing.footerBuiltWith")} <span className="text-foreground font-semibold">Claude.ai</span>, <span className="text-foreground font-semibold">Grok.ai</span>, <span className="text-foreground font-semibold">Firebase</span> {t("landing.footerAnd")} <span className="text-foreground font-semibold">Lovable</span>.
             </p>
