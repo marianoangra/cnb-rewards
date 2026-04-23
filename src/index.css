@@ -93,32 +93,27 @@
     background: linear-gradient(90deg, transparent, hsl(160 100% 45% / 0.6), transparent);
   }
 
-  @keyframes spark {
-    0%, 100% {
+  @keyframes streak {
+    0% {
+      left: -40%;
       opacity: 0;
-      transform: var(--tw-rotate, rotate(0deg)) scale(0.85);
     }
-    20% {
+    10% {
       opacity: 1;
-      transform: scale(1.05);
     }
-    35% {
-      opacity: 0.4;
-    }
-    50% {
+    90% {
       opacity: 1;
-      transform: scale(1);
     }
-    70% {
+    100% {
+      left: 110%;
       opacity: 0;
     }
   }
 
-  .animate-spark {
-    animation-name: spark;
+  .animate-streak {
+    animation-name: streak;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    transform-origin: center;
-    will-change: opacity, transform;
+    animation-timing-function: linear;
+    will-change: left, opacity;
   }
 }
