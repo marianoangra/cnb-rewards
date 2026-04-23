@@ -11,6 +11,7 @@ import logoCnb from "@/assets/logo-cnb.png";
 import appScreen from "@/assets/app-screen-carregando.png";
 import appStoreBadge from "@/assets/app-store-badge.avif";
 import solanaLogo from "@/assets/solana.svg";
+import EnergyBolts from "@/components/EnergyBolts";
 
 const Login = () => {
   const { user, loading } = useAuth();
