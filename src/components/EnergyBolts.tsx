@@ -1,13 +1,12 @@
 // Subtle energy streaks crossing the hero — thin horizontal light beams
-// that travel across the screen. Inspired by Cloak's minimal, technical look.
+// that travel slowly across the screen. Kept very faint to avoid distraction.
 const STREAKS = [
-  { top: "12%", delay: "0s", duration: "6s", width: "30%", opacity: 0.5 },
-  { top: "24%", delay: "2.4s", duration: "7.5s", width: "22%", opacity: 0.35 },
-  { top: "38%", delay: "1.2s", duration: "8s", width: "38%", opacity: 0.45 },
-  { top: "52%", delay: "4s", duration: "6.8s", width: "26%", opacity: 0.4 },
-  { top: "66%", delay: "0.8s", duration: "9s", width: "34%", opacity: 0.38 },
-  { top: "78%", delay: "3.2s", duration: "7s", width: "24%", opacity: 0.32 },
-  { top: "88%", delay: "5s", duration: "8.5s", width: "30%", opacity: 0.42 },
+  { top: "14%", delay: "0s", duration: "12s", width: "22%", opacity: 0.18 },
+  { top: "28%", delay: "4s", duration: "14s", width: "18%", opacity: 0.12 },
+  { top: "42%", delay: "2s", duration: "13s", width: "26%", opacity: 0.16 },
+  { top: "58%", delay: "6s", duration: "15s", width: "20%", opacity: 0.14 },
+  { top: "72%", delay: "1.5s", duration: "16s", width: "24%", opacity: 0.13 },
+  { top: "86%", delay: "8s", duration: "13.5s", width: "20%", opacity: 0.15 },
 ];
 
 const EnergyBolts = () => {
@@ -27,8 +26,8 @@ const EnergyBolts = () => {
             animationDelay: s.delay,
             animationDuration: s.duration,
             background:
-              "linear-gradient(90deg, transparent 0%, hsl(var(--primary) / 0.9) 50%, transparent 100%)",
-            boxShadow: "0 0 8px hsl(var(--primary) / 0.6)",
+              "linear-gradient(90deg, transparent 0%, hsl(var(--primary) / 0.7) 50%, transparent 100%)",
+            boxShadow: "0 0 3px hsl(var(--primary) / 0.25)",
           }}
         />
       ))}
