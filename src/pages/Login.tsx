@@ -399,10 +399,25 @@ const Login = () => {
       <footer className="border-t border-border py-10 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div>
-              <p className="text-lg font-bold font-heading"><span className="text-primary">CNB</span> Mobile</p>
-              <p className="text-xs text-muted-foreground mt-1">{t("landing.footerBy")}</p>
-              <p className="text-xs text-muted-foreground mt-1">{t("landing.footerLocation")}</p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+              <div>
+                <p className="text-lg font-bold font-heading"><span className="text-primary">CNB</span> Mobile</p>
+                <p className="text-xs text-muted-foreground mt-1">{t("landing.footerBy")}</p>
+                <p className="text-xs text-muted-foreground mt-1">{t("landing.footerLocation")}</p>
+              </div>
+              <a
+                href="https://solana.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Powered by Solana"
+                className="group inline-flex items-center gap-4 self-start rounded-2xl border border-border bg-card px-5 py-3 transition-all hover:border-primary/50 hover:shadow-elevated hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground group-hover:text-foreground transition-colors whitespace-nowrap">
+                  Powered by
+                </span>
+                <span className="h-8 w-px bg-border" aria-hidden="true" />
+                <img src={solanaLogo} alt="Solana" className="h-12 w-auto" />
+              </a>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <Link to="/terms" className="hover:text-foreground transition-colors">{t("landing.footerTerms")}</Link>
@@ -413,19 +428,6 @@ const Login = () => {
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-border flex flex-col gap-4">
-            <a
-              href="https://solana.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Powered by Solana"
-              className="group inline-flex items-center gap-4 self-start rounded-2xl border border-border bg-card px-5 py-3 transition-all hover:border-primary/50 hover:shadow-elevated hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            >
-              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground group-hover:text-foreground transition-colors">
-                Powered by
-              </span>
-              <span className="h-6 w-px bg-border" aria-hidden="true" />
-              <img src={solanaLogo} alt="Solana" className="h-9 w-auto" />
-            </a>
             <p className="text-xs text-muted-foreground">
               {t("landing.footerBuiltWith")} <span className="text-foreground font-semibold">Claude.ai</span>, <span className="text-foreground font-semibold">Grok.ai</span>, <span className="text-foreground font-semibold">Firebase</span> {t("landing.footerAnd")} <span className="text-foreground font-semibold">Lovable</span>.
             </p>
