@@ -85,25 +85,6 @@ const Login = () => {
                   className="h-full w-auto object-contain"
                 />
               </a>
-              <a
-                href="https://apps.apple.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar na App Store"
-                className="inline-flex h-14 items-center justify-center rounded-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-              >
-                <img
-                  alt="Baixar na App Store"
-                  src={appStoreBadge}
-                  loading="eager"
-                  decoding="async"
-                  // @ts-expect-error fetchpriority is valid HTML attribute
-                  fetchpriority="high"
-                  width="180"
-                  height="56"
-                  className="h-full w-auto object-contain"
-                />
-              </a>
             </div>
           </div>
 
@@ -388,19 +369,6 @@ const Login = () => {
               <img
                 alt={t("landing.googlePlayAlt")}
                 src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
-                className="h-full w-auto object-contain"
-              />
-            </a>
-            <a
-              href="https://apps.apple.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Baixar na App Store"
-              className="inline-flex h-14 items-center justify-center rounded-lg bg-white p-px transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            >
-              <img
-                alt="Baixar na App Store"
-                src={appStoreBadge}
                 className="h-full w-auto object-contain"
               />
             </a>
