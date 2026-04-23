@@ -54,8 +54,9 @@ const Login = () => {
         </div>
       </nav>
 
-      <section className="relative pt-32 pb-20 px-6 gradient-hero">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <section className="relative pt-32 pb-20 px-6 gradient-hero overflow-hidden">
+        <EnergyBolts />
+        <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-xs font-mono uppercase tracking-widest text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
