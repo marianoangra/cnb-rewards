@@ -171,17 +171,47 @@ const Login = () => {
           <h2 className="text-3xl md:text-4xl font-black font-heading mb-4">{t("landing.howTitle")}</h2>
           <p className="text-muted-foreground mb-12 max-w-lg">{t("landing.howDesc")}</p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 relative">
             {[
               { step: "01", icon: "📲", title: t("landing.step1Title"), desc: t("landing.step1Desc") },
               { step: "02", icon: "🔌", title: t("landing.step2Title"), desc: t("landing.step2Desc") },
               { step: "03", icon: "🏆", title: t("landing.step3Title"), desc: t("landing.step3Desc") },
-            ].map((item) => (
-              <div key={item.step} className="bg-card rounded-2xl p-6 border border-border group hover:border-primary/50 transition-colors">
-                <p className="text-xs font-mono text-muted-foreground mb-4">{item.step} —</p>
-                <p className="text-3xl mb-3">{item.icon}</p>
-                <h3 className="text-lg font-bold font-heading mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
+            ].map((item, idx) => (
+              <div
+                key={item.step}
+                className="relative bg-card rounded-2xl p-7 border border-border overflow-hidden transition-all duration-300 hover:border-primary/60 hover:-translate-y-1 hover:shadow-elevated group"
+              >
+                {/* Glow accent */}
+                <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Big faded step number */}
+                <span
+                  aria-hidden="true"
+                  className="absolute top-3 right-5 text-7xl font-black font-heading text-primary/5 group-hover:text-primary/10 transition-colors leading-none select-none"
+                >
+                  {item.step}
+                </span>
+
+                {/* Step badge */}
+                <div className="relative flex items-center gap-2 mb-5">
+                  <span className="inline-flex items-center justify-center h-7 px-2.5 rounded-md bg-primary/10 text-primary text-xs font-mono font-semibold tracking-widest">
+                    STEP {item.step}
+                  </span>
+                  <span className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
+                </div>
+
+                {/* Icon circle */}
+                <div className="relative w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center text-3xl mb-5 shadow-elevated group-hover:scale-110 transition-transform duration-300">
+                  <span className="drop-shadow-sm">{item.icon}</span>
+                </div>
+
+                <h3 className="relative text-xl font-bold font-heading mb-2 group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+                <p className="relative text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary to-primary/40 transition-all duration-500" />
               </div>
             ))}
           </div>
