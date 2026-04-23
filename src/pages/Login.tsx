@@ -372,19 +372,6 @@ const Login = () => {
                 className="h-full w-auto object-contain"
               />
             </a>
-            <a
-              href="https://apps.apple.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Baixar na App Store"
-              className="inline-flex h-14 items-center justify-center rounded-lg bg-white p-px transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            >
-              <img
-                alt="Baixar na App Store"
-                src={appStoreBadge}
-                className="h-full w-auto object-contain"
-              />
-            </a>
           </div>
         </div>
       </section>
