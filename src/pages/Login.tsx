@@ -424,7 +424,7 @@ const Login = () => {
                 Powered by
               </span>
               <span className="h-6 w-px bg-border" aria-hidden="true" />
-              <img src={solanaLogo} alt="Solana" className="h-5 w-auto" />
+              <img src={solanaLogo} alt="Solana" className="h-9 w-auto" />
             </a>
             <p className="text-xs text-muted-foreground">
               {t("landing.footerBuiltWith")} <span className="text-foreground font-semibold">Claude.ai</span>, <span className="text-foreground font-semibold">Grok.ai</span>, <span className="text-foreground font-semibold">Firebase</span> {t("landing.footerAnd")} <span className="text-foreground font-semibold">Lovable</span>.
