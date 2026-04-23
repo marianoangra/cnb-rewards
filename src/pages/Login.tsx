@@ -390,6 +390,7 @@ const Login = () => {
               <Link to="/privacy-en" className="hover:text-foreground transition-colors">{t("landing.footerPrivacyEN")}</Link>
               <Link to="/copyright" className="hover:text-foreground transition-colors">{t("landing.footerCopyright")}</Link>
               <Link to="/support" className="hover:text-foreground transition-colors">{t("landing.footerSupport")}</Link>
+              <a href="https://www.cloak.ag/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Cloak Privacy</a>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-border flex flex-col gap-4">
