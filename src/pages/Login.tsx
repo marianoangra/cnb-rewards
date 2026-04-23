@@ -76,6 +76,12 @@ const Login = () => {
                 <img
                   alt={t("landing.googlePlayAlt")}
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png"
+                  loading="eager"
+                  decoding="async"
+                  // @ts-expect-error fetchpriority is valid HTML attribute
+                  fetchpriority="high"
+                  width="180"
+                  height="56"
                   className="h-full w-auto object-contain"
                 />
               </a>
@@ -89,6 +95,12 @@ const Login = () => {
                 <img
                   alt="Baixar na App Store"
                   src={appStoreBadge}
+                  loading="eager"
+                  decoding="async"
+                  // @ts-expect-error fetchpriority is valid HTML attribute
+                  fetchpriority="high"
+                  width="180"
+                  height="56"
                   className="h-full w-auto object-contain"
                 />
               </a>
