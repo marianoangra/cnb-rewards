@@ -154,10 +154,29 @@ const Login = () => {
             { label: t("landing.statsPlatform"), value: t("landing.statsPlatformValue"), icon: "🌍" },
             { label: t("landing.statsInnovation"), value: t("landing.statsInnovationValue"), icon: "🇧🇷" },
           ].map((s) => (
-            <div key={s.label} className="bg-card rounded-xl p-4 border border-border text-center">
-              <p className="text-2xl mb-1">{s.icon}</p>
-              <p className="text-sm font-bold text-foreground">{s.value}</p>
-              <p className="text-xs text-muted-foreground">{s.label}</p>
+            <div
+              key={s.label}
+              className="group relative bg-card rounded-2xl p-5 border border-border overflow-hidden transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-elevated"
+            >
+              {/* glow accent */}
+              <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-primary/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              <div className="relative flex items-center gap-3">
+                <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-secondary border border-border text-2xl shrink-0 group-hover:border-primary/40 group-hover:bg-primary/5 transition-colors">
+                  {s.icon}
+                </div>
+                <div className="min-w-0 text-left">
+                  <p className="text-xl font-black font-heading text-foreground leading-tight truncate">
+                    {s.value}
+                  </p>
+                  <p className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground truncate">
+                    {s.label}
+                  </p>
+                </div>
+              </div>
+
+              {/* bottom accent line */}
+              <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-500" />
             </div>
           ))}
         </div>
